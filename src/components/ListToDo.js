@@ -31,13 +31,13 @@ const ListTodo = () => {
     const copy = ListToDo.filter((item) => item.id !== id);
 
     setListToDo(copy);
+    console.log('copy ', copy);
   };
   const handleCompleteToDo = (id) => {
-    let changeId = id - 1;
-    let copy = [...ListToDo];
-    copy[changeId].status = 1;
-    setListToDo(copy);
-    console.log('copy ', copy[changeId]);
+    const copy = ListToDo.filter((item) => item.id === id);
+    const sliceArray = ListToDo.slice();
+    copy[0].status = 1;
+    setListToDo(sliceArray);
   };
   const [activeModalIndex, setActiveModalIndex] = useState(null);
 
