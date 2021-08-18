@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ToDoProvider } from './context/ToDoContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ToDoProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ToDoProvider>,
   document.getElementById('root')
 );
 
