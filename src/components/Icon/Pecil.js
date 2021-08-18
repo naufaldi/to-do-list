@@ -3,7 +3,6 @@ import React from 'react';
 const Pencil = ({ className }) => {
   return (
     <svg
-      class="w-6 h-6"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
